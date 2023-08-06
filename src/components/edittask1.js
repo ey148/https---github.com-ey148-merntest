@@ -10,8 +10,9 @@ export default function CreateTask() {
   const [activity, setOnChangeActivity] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/activity/${id}`)
-      .then((response) => {
+//      .get(`http://localhost:5000/activity/${id}`)
+        .get(`http://https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/${id}`)
+        .then((response) => {
         setOnChangeActivity(response.data.activity);
       })
       .catch((error) => {
@@ -24,12 +25,13 @@ export default function CreateTask() {
     const activityvar = { activity: activity };
     console.log(activityvar);
 
-    console.log(`http://localhost:5000/activity/update/${id}`);
+//    console.log(`http://localhost:5000/activity/update/${id}`);
     // console.log(e)
 
     axios
-      .post(`http://localhost:5000/activity/update/${id}`, activityvar)
-      .then((res) => {
+//    .post(`http://localhost:5000/activity/update/${id}`, activityvar)
+    .post(`https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/update/${id}`, activityvar)
+    .then((res) => {
         window.location = '/';
       });
   };
