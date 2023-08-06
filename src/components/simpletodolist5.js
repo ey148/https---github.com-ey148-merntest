@@ -30,7 +30,7 @@ export default function SimpleTodosList() {
   useEffect(() => {
     axios
 //    .get('http://localhost:5000/activity/')
-    .get('https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/')
+    .get('https://merntestbackend.onrender.com/activity/')
     .then((response) => {
         setTodoList(response.data);
       })
@@ -41,7 +41,7 @@ export default function SimpleTodosList() {
 
   const deleteTodo = (id) => {
     axios
-    .delete('https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/delete/' + id)
+    .delete('https://merntestbackend.onrender.com/activity/delete/' + id)
 //    .delete('http://localhost:5000/activity/delete/' + id)
     .then((response) => {
         console.log(response.data);

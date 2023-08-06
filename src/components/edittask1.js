@@ -11,7 +11,7 @@ export default function CreateTask() {
   useEffect(() => {
     axios
 //      .get(`http://localhost:5000/activity/${id}`)
-        .get(`http://https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/${id}`)
+        .get(`https://merntestbackend.onrender.com/activity/${id}`)
         .then((response) => {
         setOnChangeActivity(response.data.activity);
       })
@@ -30,7 +30,7 @@ export default function CreateTask() {
 
     axios
 //    .post(`http://localhost:5000/activity/update/${id}`, activityvar)
-    .post(`https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/update/${id}`, activityvar)
+    .post(`https://merntestbackend.onrender.com/activity/update/${id}`, activityvar)
     .then((res) => {
         window.location = '/';
       });

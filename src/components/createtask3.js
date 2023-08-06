@@ -11,7 +11,7 @@ export default function CreateTask() {
 
     axios
 //    .post('http://localhost:5000/activity/add', activityvar)
-    .post('https://dashboard.render.com/web/srv-cj81t8s5kgrc73ddlf9g/activity/add', activityvar)
+    .post('https://merntestbackend.onrender.com/activity/add', activityvar)
     .then((res) => {
         window.location = '/';
       });
