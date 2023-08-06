@@ -13,7 +13,7 @@ app.use(express.json());
 
 // const uri = process.env.ATLAS_URI;
 //const uri = "mongodb+srv://newuser:123@cluster0.f9d6o.gcp.mongodb.net/activitiescollections";
-const uri = "mongodb+srv://ey148:12345@cluster0.ruqcqhp.mongodb.net/activitiescollections";
+const uri="mongodb+srv://ey148:12345@cluster0.ruqcqhp.mongodb.net/activitiescollections?retryWrites=true&w=majority";
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true,  useUnifiedTopology: true   }
 );
 const connection = mongoose.connection;
